@@ -1,236 +1,152 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Reverso Works: engenharia reversa, desenvolvimento de peças e fabricação digital sob demanda." />
-  <meta name="theme-color" content="#0A1220" />
-  <title>Reverso Works — Comando Técnico para peças reais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Reverso Works develops hard-to-find and custom parts through reverse engineering, CAD design, prototyping and digital fabrication." />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://www.reversoworks.com/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2307111f'/%3E%3Cpath d='M14 15h22c10 0 16 5 16 14 0 7-4 11-10 13l11 7H40L29 42h-4v7H14V15Zm11 9v10h10c4 0 6-2 6-5s-2-5-6-5H25Z' fill='%2357d3d3'/%3E%3C/svg%3E" />
+  <title>Reverso Works — From problem to working part</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header" data-header>
-      <nav class="container nav" aria-label="Navegação principal">
-        <a class="brand" href="#inicio" aria-label="Reverso Works — início">
-          <img class="brand-logo" src="assets/reverso-logo-branca.png" alt="Reverso Works" />
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-icon" aria-hidden="true"></span><span>MENU</span></button>
-        <div class="nav-links" id="primary-nav">
-          <a href="#portfolio">WORK</a>
-          <a href="#servicos">SERVICES</a>
-          <a href="#processo">PROCESS</a>
-          <a href="#quem-somos">ABOUT</a>
-        </div>
-        <a class="nav-contact" href="mailto:contact@reversoworks.com?subject=Project%20Inquiry">START A PROJECT</a>
-      </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <main>
-      <section id="inicio" class="hero hero-command" aria-labelledby="hero-title">
-        <div class="hero-grid-overlay" aria-hidden="true"></div>
-        <figure class="hero-art" aria-hidden="true">
-          <img src="assets/reverso-hero-clean.jpg" width="1672" height="941" alt="" decoding="async" fetchpriority="high" />
-        </figure>
-        <div class="hero-art-shade" aria-hidden="true"></div>
-        <div class="container hero-layout">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><span></span>REVERSE ENGINEERING / PRODUCT DEVELOPMENT</p>
-            <h1 id="hero-title"><span>FROM PROBLEM</span><span>TO WORKING</span><em>PART.</em></h1>
-            <p class="hero-lede">Reverse engineering, 3D design, prototyping and custom fabrication for parts that no longer exist, no longer fit, or need to work better.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="mailto:contact@reversoworks.com?subject=Project%20Inquiry">DISCUSS YOUR PROJECT</a>
-              <a class="text-link" href="#portfolio">VIEW SELECTED WORK <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="hero-contact-line" aria-label="Contact information"><a href="tel:+15109383188">+1 (510) 938-3188</a><span aria-hidden="true">/</span><a href="mailto:contact@reversoworks.com">contact@reversoworks.com</a></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="quem-somos" class="section intro-section">
-        <div class="container intro-grid">
-          <div class="section-kicker reveal"><span>01</span><p>Quem somos</p></div>
-          <div class="intro-copy reveal">
-            <h2>Engenharia aplicada a <span>problemas que não cabem</span> em catálogo.</h2>
-            <p class="lead">A Reverso Works atua na interseção entre engenharia reversa, desenvolvimento de produto e fabricação digital. Cada projeto começa pelo entendimento da aplicação — não apenas pela cópia de uma forma.</p>
-            <p>Trabalhamos com reposição, recuperação, adaptação e desenvolvimento de componentes. Quando uma peça é difícil de encontrar, saiu de linha ou precisa ser personalizada, estruturamos um novo caminho para ela.</p>
-          </div>
-          <div class="intro-statement reveal">
-            <div class="statement-number">01<span>/</span>01</div>
-            <p>Precisão não é um acabamento. É uma decisão tomada desde a primeira medida.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section problem-section">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="section-kicker"><span>02</span><p>O desafio</p></div>
-            <h2>O problema raramente é <span>“só uma peça”.</span></h2>
-          </div>
-          <div class="challenge-grid">
-            <article class="challenge-card reveal"><span class="card-index">A</span><h3>Reposição</h3><p>Componentes difíceis de localizar, descontinuados ou sem fornecimento confiável.</p></article>
-            <article class="challenge-card reveal"><span class="card-index">B</span><h3>Recuperação</h3><p>Peças danificadas que precisam voltar à operação com uma nova solução técnica.</p></article>
-            <article class="challenge-card reveal"><span class="card-index">C</span><h3>Adaptação</h3><p>Geometrias, encaixes e interfaces que precisam atender uma aplicação específica.</p></article>
-            <article class="challenge-card reveal"><span class="card-index">D</span><h3>Desenvolvimento</h3><p>Ideias e necessidades que ainda não existem como um componente fabricável.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicos" class="section services-section">
-        <div class="container services-layout">
-          <div class="services-intro reveal">
-            <div class="section-kicker"><span>03</span><p>O que fazemos</p></div>
-            <h2>Do dado físico ao <span>componente pronto.</span></h2>
-            <p>Unimos leitura técnica, modelagem, escolha de materiais e produção para avançar com segurança entre a demanda e a solução.</p>
-            <a class="text-link lime" href="#processo">Ver fluxo de trabalho <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="services-list">
-            <article class="service-row reveal"><span>01</span><div><h3>Engenharia reversa</h3><p>Análise de peças e componentes para reconstrução de geometrias e funções.</p></div><b aria-hidden="true">↗</b></article>
-            <article class="service-row reveal"><span>02</span><div><h3>Escaneamento e levantamento 3D</h3><p>Captura dimensional e leitura de referência para criar uma base técnica confiável.</p></div><b aria-hidden="true">↗</b></article>
-            <article class="service-row reveal"><span>03</span><div><h3>Modelagem CAD</h3><p>Reconstrução digital, revisão de detalhes e desenvolvimento de geometrias editáveis.</p></div><b aria-hidden="true">↗</b></article>
-            <article class="service-row reveal"><span>04</span><div><h3>Seleção de materiais</h3><p>Decisões orientadas por aplicação, carga, ambiente e requisitos de uso.</p></div><b aria-hidden="true">↗</b></article>
-            <article class="service-row reveal"><span>05</span><div><h3>Prototipagem e produção</h3><p>Impressão 3D, fabricação de reposição, pós-processamento e controle de qualidade.</p></div><b aria-hidden="true">↗</b></article>
-            <article class="service-row reveal"><span>06</span><div><h3>Reimpressão controlada</h3><p>Registro de código e revisão para reproduzir soluções aprovadas com consistência.</p></div><b aria-hidden="true">↗</b></article>
-          </div>
-        </div>
-      </section>
-
-      <section id="processo" class="section process-section">
-        <div class="container">
-          <div class="process-top reveal">
-            <div class="section-kicker dark"><span>04</span><p>Como funciona</p></div>
-            <h2>Um processo claro para uma solução <span>mais segura.</span></h2>
-            <p>O trabalho avança de forma rastreável: entendemos o contexto, avaliamos a peça, validamos a proposta e só então produzimos.</p>
-          </div>
-          <ol class="process-grid">
-            <li class="reveal"><span>01</span><h3>Entender</h3><p>Você apresenta o problema, a aplicação e os requisitos conhecidos.</p></li>
-            <li class="reveal"><span>02</span><h3>Analisar</h3><p>A peça é medida ou escaneada, e as premissas técnicas são levantadas.</p></li>
-            <li class="reveal"><span>03</span><h3>Reconstruir</h3><p>A geometria é desenvolvida em CAD e revisada para a função pretendida.</p></li>
-            <li class="reveal"><span>04</span><h3>Validar</h3><p>Escopo, material, riscos, orçamento e condições de fabricação são alinhados.</p></li>
-            <li class="reveal"><span>05</span><h3>Produzir</h3><p>A solução segue para fabricação, controle de qualidade e entrega.</p></li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="portfolio" class="section portfolio-section">
-        <div class="container portfolio-layout">
-          <div class="portfolio-image reveal">
-            <img src="assets/reverso-portfolio.jpg" alt="Componentes fabricados em materiais diferentes sobre uma superfície técnica" />
-            <p><span></span> VISUAL CONCEITUAL · NÃO REPRESENTA PROJETO DE CLIENTE</p>
-          </div>
-          <div class="portfolio-copy reveal">
-            <div class="section-kicker"><span>05</span><p>Portfólio</p></div>
-            <div class="portfolio-status"><i></i> Em construção</div>
-            <h2>Documentar o processo é parte da <span>entrega.</span></h2>
-            <p>O portfólio da Reverso Works será formado por projetos autorizados e fichas técnicas reais. Cada caso poderá registrar o ponto de partida, a análise, a revisão aplicada, a fabricação e o resultado entregue.</p>
-            <div class="portfolio-tags"><span>REPOSIÇÃO</span><span>ADAPTAÇÃO</span><span>PROTÓTIPO</span><span>PEÇA ESPECIAL</span></div>
-            <a class="button button-dark" href="#contato">Levar um projeto para análise <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section fronts-section">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="section-kicker"><span>06</span><p>Duas linhas</p></div>
-            <h2>Uma capacidade técnica. <span>Duas formas de chegar ao mercado.</span></h2>
-          </div>
-          <div class="fronts-grid">
-            <article class="front-card works reveal">
-              <div class="front-card-top"><span>01</span><span>PARA PROJETOS ESPECÍFICOS</span></div>
-              <h3>Reverso <em>Works</em></h3>
-              <p>Engenharia, reposição e fabricação personalizada para quem precisa recuperar, adaptar, reproduzir ou desenvolver uma peça.</p>
-              <ul><li>Problema técnico ou necessidade física</li><li>Análise e desenvolvimento sob demanda</li><li>Peça única, lote pequeno ou solução especial</li></ul>
-            </article>
-            <article class="front-card studio reveal">
-              <div class="front-card-top"><span>02</span><span>PARA PRODUTOS AUTORAIS</span></div>
-              <h3>Reverso <em>Studio</em></h3>
-              <p>Produtos autorais e itens para venda direta, combinando design, fabricação digital e produção sob demanda.</p>
-              <ul><li>Produtos desenvolvidos internamente</li><li>Design aplicado ao uso cotidiano</li><li>Venda direta e em marketplaces</li></ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section trace-section">
-        <div class="container trace-layout">
-          <div class="trace-copy reveal">
-            <div class="section-kicker dark"><span>07</span><p>Controle e rastreabilidade</p></div>
-            <h2>Cada decisão deixa <span>um registro.</span></h2>
-            <p>Para projetos em acompanhamento, a Reverso Works pode organizar informações de cliente, pedido, peça, revisão, análise, orçamento, fabricação, consumo de material, controle de qualidade, entrega e faturamento.</p>
-            <p>Essa estrutura permite recuperar o histórico de uma solução e reproduzir peças aprovadas de forma controlada.</p>
-          </div>
-          <div class="trace-board reveal" aria-label="Etapas rastreáveis do projeto">
-            <div class="board-header"><span>RASTREABILIDADE</span><i>● ONLINE</i></div>
-            <div class="board-flow"><div><b>01</b><span>Pedido</span></div><em></em><div><b>02</b><span>Peça / rev.</span></div><em></em><div><b>03</b><span>Análise</span></div><em></em><div><b>04</b><span>Produção</span></div><em></em><div><b>05</b><span>Entrega</span></div></div>
-            <div class="board-foot"><span>REGISTRO TÉCNICO</span><span>REVISÃO CONTROLADA</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section applications-section">
-        <div class="container">
-          <div class="applications-head reveal"><div class="section-kicker"><span>08</span><p>Aplicações</p></div><h2>Projetos únicos, pequenas séries e <span>demandas especiais.</span></h2></div>
-          <div class="applications-grid">
-            <div class="app-item reveal"><b>01</b><h3>Manutenção e reposição</h3><p>Componentes para manter equipamentos, produtos e conjuntos em operação.</p></div>
-            <div class="app-item reveal"><b>02</b><h3>Adaptações funcionais</h3><p>Peças ajustadas a medidas, interfaces e condições de uso específicas.</p></div>
-            <div class="app-item reveal"><b>03</b><h3>Protótipos de produto</h3><p>Modelos físicos para avaliar forma, encaixe, função e evolução de uma ideia.</p></div>
-            <div class="app-item reveal"><b>04</b><h3>Produtos autorais</h3><p>Itens da Reverso Studio criados para uso real e produção sob demanda.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section quality-section">
-        <div class="container quality-layout reveal">
-          <div><div class="section-kicker"><span>09</span><p>Compromisso com qualidade</p></div><h2>Clareza sobre o que é possível — e sobre o que precisa ser validado.</h2></div>
-          <p>Não tratamos qualquer reprodução como equivalente a uma peça original ou apropriada para qualquer condição. Projetos críticos dependem de análise de engenharia, confirmação de requisitos, testes e aprovação antes da fabricação definitiva.</p>
-        </div>
-      </section>
-
-      <section id="contato" class="contact-section">
-        <div class="contact-grid-overlay" aria-hidden="true"></div>
-        <div class="container contact-layout">
-          <div class="contact-copy reveal">
-            <p class="eyebrow"><span class="pulse-dot"></span> Vamos conversar</p>
-            <h2>Se a peça não existe mais, não atende à aplicação ou precisa ser reinventada, a Reverso Works desenvolve um novo caminho.</h2>
-            <p>Apresente seu problema. Nós analisamos, desenvolvemos e transformamos a solução em uma peça real.</p>
-            <a class="contact-email" href="mailto:contato@reversoworks.com?subject=Novo%20projeto%20-%20Reverso%20Works">contato@reversoworks.com <span aria-hidden="true">↗</span></a>
-          </div>
-          <form id="contact-form" class="contact-form reveal">
-            <div class="form-label">INICIAR UM PROJETO</div>
-            <label>Seu nome<input required name="nome" type="text" placeholder="Como podemos chamar você?" /></label>
-            <label>E-mail<input required name="email" type="email" placeholder="nome@empresa.com" /></label>
-            <label>Sobre o que precisa?<textarea required name="projeto" rows="4" placeholder="Conte sobre a peça, aplicação ou necessidade."></textarea></label>
-            <button class="button button-primary" type="submit">Enviar apresentação <span aria-hidden="true">↗</span></button>
-            <p class="form-note">O envio abre seu aplicativo de e-mail com as informações preenchidas.</p>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <a class="brand footer-brand" href="#inicio"><img class="brand-logo" src="assets/reverso-logo-branca.png" alt="Reverso Works" /></a>
-        <p>Engenharia reversa · desenvolvimento de peças · fabricação digital sob demanda</p>
-        <div><a href="#quem-somos">Quem somos</a><a href="#servicos">Serviços</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></div>
+  <header class="site-header" data-header>
+    <nav class="shell nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Reverso Works, home">
+        <span class="brand-main">REVERSO</span><span class="brand-sub">WORKS</span>
+      </a>
+      <div class="desktop-nav" aria-label="Desktop navigation">
+        <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#about">About</a>
       </div>
-      <div class="container footer-bottom"><span>© 2026 Reverso Works. Todos os direitos reservados.</span><span>PRECISÃO APLICADA AO MUNDO REAL.</span></div>
-    </footer>
-  </div>
+      <a class="header-cta" href="mailto:contact@reversoworks.com?subject=Project%20inquiry">Start a project</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span class="menu-label">Menu</span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <p class="micro-label">Navigate / 01—05</p>
+        <a href="#work"><span>01</span>Selected work</a><a href="#capabilities"><span>02</span>Capabilities</a><a href="#process"><span>03</span>Process</a><a href="#about"><span>04</span>About</a><a href="#contact"><span>05</span>Contact</a>
+        <div class="mobile-menu-contact"><a href="tel:+15109383188">+1 (510) 938-3188</a><a href="mailto:contact@reversoworks.com">contact@reversoworks.com</a></div>
+      </div>
+    </div>
+  </header>
 
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      const subject = 'Novo projeto — Reverso Works';
-      const body = 'Nome: ' + data.get('nome') + '\nE-mail: ' + data.get('email') + '\n\nProjeto / necessidade:\n' + data.get('projeto');
-      window.location.href = 'mailto:contato@reversoworks.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    });
-  </script>
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <figure class="hero-art" aria-hidden="true"><img src="assets/reverso-hero-clean.jpg" width="1672" height="941" alt="" fetchpriority="high" decoding="async" /></figure>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="shell hero-layout">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span>Reverse engineering / Product development</p>
+          <h1 id="hero-title"><span>From problem</span><span>to working</span><em>part.</em></h1>
+          <p class="hero-lede">Reverse engineering, 3D design, prototyping and custom fabrication for parts that no longer exist, no longer fit, or need to work better.</p>
+          <div class="hero-actions"><a class="button button-primary" href="mailto:contact@reversoworks.com?subject=Project%20inquiry">Discuss your project</a><a class="editorial-link" href="#work">View selected work</a></div>
+          <div class="hero-contact" aria-label="Contact Reverso Works"><a href="tel:+15109383188">+1 (510) 938-3188</a><span aria-hidden="true">/</span><a href="mailto:contact@reversoworks.com">contact@reversoworks.com</a></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span>Explore the work</div>
+    </section>
+
+    <div class="capability-strip" aria-label="Core capabilities"><div class="strip-track"><span>Reverse engineering</span><i></i><span>CAD development</span><i></i><span>Prototyping</span><i></i><span>Custom fabrication</span><i></i><span>Controlled revisions</span></div></div>
+
+    <section class="section thesis" id="about" aria-labelledby="thesis-title">
+      <div class="shell thesis-grid">
+        <div class="section-index" data-reveal><span>01</span><p>What we solve</p></div>
+        <div class="thesis-copy" data-reveal><p class="micro-label">Built around the application</p><h2 id="thesis-title">Not every problem has an <em>off-the-shelf answer.</em></h2><p class="large-copy">Reverso Works studies the part, the interface and the job it needs to perform. We rebuild that logic as a manufacturable solution — documented, revisable and ready to validate.</p></div>
+        <aside class="thesis-note" data-reveal><span>Principle 01</span><p>We do not copy a shape. We recover the function behind it.</p></aside>
+      </div>
+    </section>
+
+    <section class="section capabilities" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="shell">
+        <div class="section-heading" data-reveal><div class="section-index"><span>02</span><p>Capabilities</p></div><div><p class="micro-label">One technical workflow</p><h2 id="capabilities-title">From physical evidence to a <em>working component.</em></h2></div></div>
+        <div class="capability-grid">
+          <article class="capability-card" data-reveal><span class="card-number">01</span><div class="card-symbol" aria-hidden="true">R/E</div><h3>Reverse engineering</h3><p>Analysis of an existing component to recover its geometry, interfaces and functional intent.</p></article>
+          <article class="capability-card" data-reveal><span class="card-number">02</span><div class="card-symbol" aria-hidden="true">3D</div><h3>CAD development</h3><p>Editable digital models developed for fit, revision control and the selected production process.</p></article>
+          <article class="capability-card featured" data-reveal><span class="card-number">03</span><div class="card-symbol" aria-hidden="true">P/1</div><h3>Functional prototyping</h3><p>Physical iterations used to verify installation, clearances and real-world behavior before final delivery.</p></article>
+          <article class="capability-card" data-reveal><span class="card-number">04</span><div class="card-symbol" aria-hidden="true">MFG</div><h3>Custom fabrication</h3><p>One-off parts and small production runs made for applications that standard supply cannot support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured-project" id="work" aria-labelledby="work-title">
+      <div class="shell project-shell">
+        <div class="project-intro" data-reveal>
+          <div class="section-index light"><span>03</span><p>Selected work</p></div><p class="micro-label cyan">Project 001 / Automotive</p><h2 id="work-title">Fog light bracket.<br /><em>Rebuilt from the interface out.</em></h2><p>A replacement mounting structure for a 2004 Subaru Impreza WRX STI, developed from the original assembly and rebuilt as a controlled CAD model.</p>
+          <dl class="project-data"><div><dt>Input</dt><dd>Original assembly</dd></div><div><dt>Development</dt><dd>Fusion 360</dd></div><div><dt>Output</dt><dd>Revisable 3D model</dd></div></dl>
+          <a class="button button-outline" href="mailto:contact@reversoworks.com?subject=I%20have%20a%20similar%20project">I have a similar project</a>
+        </div>
+        <div class="project-gallery" data-gallery data-reveal>
+          <figure class="gallery-main"><img src="assets/project-cad-angle.jpg" width="1200" height="802" alt="Three-quarter CAD view of the custom Subaru fog light bracket" data-gallery-main /><figcaption><span data-gallery-count>01 / 04</span><span data-gallery-caption>Developed geometry / three-quarter view</span></figcaption></figure>
+          <div class="gallery-thumbs" aria-label="Project image selector">
+            <button class="gallery-thumb is-active" type="button" data-src="assets/project-cad-angle.jpg" data-alt="Three-quarter CAD view of the custom Subaru fog light bracket" data-caption="Developed geometry / three-quarter view" aria-pressed="true"><img src="assets/project-cad-angle.jpg" alt="" /><span>CAD angle</span></button>
+            <button class="gallery-thumb" type="button" data-src="assets/project-cad-front.jpg" data-alt="Front CAD view of the custom Subaru fog light bracket" data-caption="Controlled profile / front view" aria-pressed="false"><img src="assets/project-cad-front.jpg" alt="" /><span>CAD front</span></button>
+            <button class="gallery-thumb" type="button" data-src="assets/project-cad-detail.jpg" data-alt="Detailed perspective CAD view of the custom Subaru fog light bracket" data-caption="Ribs, bosses and mounting interfaces" aria-pressed="false"><img src="assets/project-cad-detail.jpg" alt="" /><span>CAD detail</span></button>
+            <button class="gallery-thumb" type="button" data-src="assets/project-source.jpg" data-alt="Original Subaru fog light assemblies and mounting brackets used as project references" data-caption="Original assemblies / source reference" aria-pressed="false"><img src="assets/project-source.jpg" alt="" /><span>Source part</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="shell">
+        <div class="section-heading compact" data-reveal><div class="section-index"><span>04</span><p>Process</p></div><div><p class="micro-label">Clear steps / visible decisions</p><h2 id="process-title">A direct path from <em>question to validation.</em></h2></div></div>
+        <ol class="process-list">
+          <li data-reveal><span>01</span><div><h3>Understand</h3><p>We define the application, failure, constraints and the outcome you actually need.</p></div><b>Problem framing</b></li>
+          <li data-reveal><span>02</span><div><h3>Capture</h3><p>We inspect the existing part, assembly, photos, measurements or available reference data.</p></div><b>Physical evidence</b></li>
+          <li data-reveal><span>03</span><div><h3>Develop</h3><p>The geometry is reconstructed and refined as an editable, production-oriented CAD model.</p></div><b>Controlled model</b></li>
+          <li data-reveal><span>04</span><div><h3>Prototype</h3><p>A physical iteration is produced to test fit, access, clearances and assembly behavior.</p></div><b>Real-world check</b></li>
+          <li data-reveal><span>05</span><div><h3>Deliver</h3><p>The approved solution is fabricated, documented and prepared for repeatable revision.</p></div><b>Working part</b></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section standards" aria-labelledby="standards-title">
+      <div class="shell standards-grid">
+        <div class="standards-lead" data-reveal><div class="section-index light"><span>05</span><p>How we work</p></div><h2 id="standards-title">Technical work without the <em>black box.</em></h2><p>You should understand what is known, what is assumed and what still needs to be tested.</p></div>
+        <div class="standard-cards"><article data-reveal><span>01</span><h3>Traceable revisions</h3><p>Models and decisions are organized so an approved solution can be understood and reproduced.</p></article><article data-reveal><span>02</span><h3>Direct communication</h3><p>You speak with the person developing the part, keeping technical context close to every decision.</p></article><article data-reveal><span>03</span><h3>Validation before claims</h3><p>Critical fit and performance are treated as requirements to verify, not promises to improvise.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section about-works" aria-labelledby="about-title">
+      <div class="shell about-grid"><div class="about-mark" aria-hidden="true" data-reveal><span>R</span><i>/</i><span>W</span></div><div class="about-copy" data-reveal><p class="micro-label">Reverso Works</p><h2 id="about-title">A small engineering studio for the parts that fall between repair, design and fabrication.</h2><p>We work on replacement components, adaptations, prototypes and special-use parts. The scale stays focused so each project receives direct technical attention from first reference to final revision.</p><div class="about-contact"><a href="tel:+15109383188">Call +1 (510) 938-3188</a><a href="mailto:contact@reversoworks.com">Email contact@reversoworks.com</a></div></div></div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="shell faq-grid">
+        <div class="faq-heading" data-reveal><div class="section-index"><span>06</span><p>Questions</p></div><h2 id="faq-title">Before you contact us.</h2></div>
+        <div class="faq-list" data-reveal>
+          <details><summary>Can you work from a broken or discontinued part?<span aria-hidden="true"></span></summary><p>Yes. An existing component, mating assembly, photographs and measurements can all become useful reference data. We first assess what is available and what still needs to be captured.</p></details>
+          <details><summary>Do I need a finished drawing?<span aria-hidden="true"></span></summary><p>No. Many projects begin with the physical problem rather than a drawing. Photos, the application and a clear description of the failure are enough to start the conversation.</p></details>
+          <details><summary>Do you accept one-off projects?<span aria-hidden="true"></span></summary><p>Yes. Reverso Works is designed for unique parts, prototypes and small quantities where a standard supplier is not the right fit.</p></details>
+          <details><summary>What should I send in the first email?<span aria-hidden="true"></span></summary><p>Include a few clear photos, the vehicle or equipment involved, what the part needs to do, quantity and any timeline you are working toward.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid" aria-hidden="true"></div>
+      <div class="shell contact-layout">
+        <div class="contact-copy" data-reveal><p class="eyebrow"><span></span>Start with the problem</p><h2 id="contact-title">Have a part, an idea or a problem that needs a new path?</h2><p>Send the context you have. We can begin with photographs and a conversation, even when the technical package is not complete yet.</p></div>
+        <div class="contact-actions" data-reveal><a class="contact-action primary" href="tel:+15109383188"><span>Call Reverso Works</span><strong>+1 (510) 938-3188</strong></a><a class="contact-action" href="mailto:contact@reversoworks.com?subject=Project%20inquiry"><span>Send project details</span><strong>contact@reversoworks.com</strong></a><div class="contact-checklist"><p class="micro-label">Helpful for the first conversation</p><ul><li>Photos of the part or problem</li><li>Vehicle, machine or application</li><li>Quantity and expected timeline</li></ul></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main"><a class="brand" href="#top" aria-label="Reverso Works, back to top"><span class="brand-main">REVERSO</span><span class="brand-sub">WORKS</span></a><p>Reverse engineering · CAD development · Prototyping · Custom fabrication</p><div class="footer-links"><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div>
+    <div class="shell footer-bottom"><span>© <span data-year>2026</span> Reverso Works</span><span>From problem to working part.</span></div>
+  </footer>
+
+  <div class="mobile-contact-dock" aria-label="Quick contact"><a href="tel:+15109383188"><span>Call</span><strong>(510) 938-3188</strong></a><a href="mailto:contact@reversoworks.com?subject=Project%20inquiry"><span>Email</span><strong>Start a project</strong></a></div>
 </body>
 </html>
