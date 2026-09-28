@@ -149,24 +149,6 @@ h1 em, h2 span { font-style: normal; color: var(--cyan); }
 .hero-command .button-primary:hover { background: linear-gradient(135deg,#8CEBDD,#70C8D1); }
 .hero-contact-line { display: flex; gap: 14px; align-items: center; margin-top: 62px; color: #AEB7C5; font: 12px var(--mono); letter-spacing: .04em; }
 .hero-contact-line a:hover { color: var(--cyan); }
-.product-stage { position: relative; min-height: 670px; height: calc(100svh - 208px); max-height: 820px; }
-.product-figure { position: absolute; z-index: 2; inset: 5% 4% 3% -5%; margin: 0; }
-.product-figure img { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: screen; filter: contrast(1.06) saturate(.75); transform: scale(1.08); }
-.product-figure figcaption { position: absolute; bottom: 4%; left: 22%; display: grid; gap: 5px; padding-left: 14px; border-left: 1px solid var(--cyan); color: #C1CAD6; font: 10px var(--mono); letter-spacing: .08em; }
-.product-figure figcaption strong { color: var(--white); font-weight: 400; }
-.process-rail { position: absolute; z-index: 3; right: 0; top: 28%; display: grid; gap: 11px; color: #98A5B6; font: 10px var(--mono); letter-spacing: .1em; }
-.process-rail span:first-child { color: var(--cyan); }
-.blueprint { position: absolute; border: 1px solid #70E9D72E; width: 320px; height: 260px; opacity: .6; }
-.blueprint-back { right: -5%; top: 18%; transform: skewY(-8deg); background: linear-gradient(90deg, transparent 49%, #70E9D725 50%, transparent 51%), linear-gradient(0deg, transparent 49%, #70E9D725 50%, transparent 51%); background-size: 32px 32px; }
-.blueprint-front { left: 8%; top: 3%; border-color: #A9D5DB55; opacity: .45; }
-.blueprint-front span { position: absolute; inset: 17% 18%; border: 1px solid #70E9D744; border-radius: 20% 25% 30% 15%; }
-.blueprint-front i, .blueprint-front b { position: absolute; display: block; border: 1px solid #70E9D744; border-radius: 50%; width: 34px; height: 34px; right: 12%; top: 10%; }
-.blueprint-front b { right: 10%; bottom: 8%; top: auto; }
-.dimension { position: absolute; color: #93A5B7; font: 10px var(--mono); letter-spacing: .05em; }
-.dimension-top { top: 5%; left: 38%; width: 38%; border-top: 1px solid #93A5B744; text-align: center; padding-top: 8px; }
-.dimension-side { right: 10%; top: 34%; height: 36%; border-right: 1px solid #93A5B744; padding: 40px 9px 0 0; }
-.stage-cross { position: absolute; color: var(--cyan); font: 24px var(--mono); font-weight: 200; }
-.cross-a { top: 8%; right: 10%; }.cross-b { bottom: 10%; left: 4%; }
 .menu-toggle { display: none; border: 0; background: transparent; color: var(--white); font: 11px var(--mono); letter-spacing: .12em; }
 .menu-icon { display: inline-block; width: 18px; height: 10px; margin-right: 8px; border-top: 1px solid var(--cyan); border-bottom: 1px solid var(--cyan); vertical-align: -1px; }
 .site-header.is-scrolled { background: #07080DDF; border-bottom-color: var(--line); }
@@ -174,9 +156,6 @@ h1 em, h2 span { font-style: normal; color: var(--cyan); }
   .hero-command { min-height: 0; padding-top: 42px; }
   .hero-command .hero-layout { min-height: 0; grid-template-columns: 1fr; gap: 12px; }
   .hero-command .hero-copy { padding-top: 36px; }
-  .product-stage { min-height: 520px; height: 62vw; max-height: 650px; }
-  .product-figure { inset: 0 -3% 0 -8%; }
-  .process-rail { right: 0; top: 25%; }
   .hero-contact-line { margin-top: 42px; }
 }
 @media (max-width: 640px) {
@@ -198,12 +177,213 @@ h1 em, h2 span { font-style: normal; color: var(--cyan); }
   .hero-command .button-primary { width: 100%; }
   .hero-contact-line { align-items: flex-start; flex-direction: column; gap: 8px; margin-top: 34px; font-size: 11px; }
   .hero-contact-line span { display: none; }
-  .product-stage { min-height: 355px; height: 88vw; margin-top: 14px; }
-  .product-figure { inset: 0 -8% 0 -14%; }
-  .product-figure img { transform: scale(1.15); }
-  .product-figure figcaption { bottom: 2%; left: 25%; font-size: 8px; }
-  .process-rail { right: 0; top: 25%; gap: 7px; font-size: 8px; }
-  .blueprint-front { left: 0; top: 3%; width: 210px; height: 170px; }
-  .blueprint-back { right: -12%; top: 22%; width: 250px; height: 190px; }
-  .dimension-top, .dimension-side, .cross-b { display: none; }
+}
+
+/* Hero approved artwork — real copy remains semantic and interactive */
+.hero-command {
+  isolation: isolate;
+  display: flex;
+  min-height: calc(100svh - 78px);
+  padding: 0;
+  background: #0A1220;
+}
+
+.hero-command .hero-grid-overlay,
+.hero-command .hero-radial {
+  display: none;
+}
+
+.hero-art {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-art-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(7, 8, 13, .93) 0%, rgba(7, 8, 13, .77) 31%, rgba(7, 8, 13, .18) 52%, transparent 66%),
+    linear-gradient(180deg, rgba(7, 8, 13, .16), transparent 24%, transparent 78%, rgba(7, 8, 13, .2));
+}
+
+.hero-command .hero-layout {
+  z-index: 2;
+  width: min(1440px, calc(100% - 88px));
+  min-height: calc(100svh - 78px);
+  grid-template-columns: minmax(0, 48%) 1fr;
+  gap: 0;
+}
+
+.hero-command .hero-copy {
+  position: relative;
+  z-index: 2;
+  padding: 62px 0 54px;
+}
+
+.hero-command h1 {
+  max-width: 7.2ch;
+  margin-bottom: 27px;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(72px, 7.35vw, 118px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: .79;
+  text-wrap: balance;
+}
+
+.hero-command h1 span,
+.hero-command h1 em {
+  white-space: nowrap;
+}
+
+.hero-command .hero-lede {
+  max-width: 500px;
+  font-size: clamp(14px, 1.02vw, 17px);
+  line-height: 1.68;
+}
+
+.hero-command .hero-actions {
+  margin-top: 38px;
+}
+
+.hero-command .button-primary {
+  min-width: 280px;
+  min-height: 64px;
+  background: #57D3D3;
+  border-color: #57D3D3;
+  border-radius: 2px;
+  box-shadow: 0 12px 36px rgba(87, 211, 211, .13);
+}
+
+.hero-command .button-primary:hover {
+  background: #79E3E3;
+  border-color: #79E3E3;
+}
+
+.hero-command .text-link {
+  border-color: rgba(245, 247, 250, .56);
+}
+
+.hero-command .hero-contact-line {
+  margin-top: clamp(42px, 6vh, 72px);
+}
+
+@media (max-width: 1100px) {
+  .hero-command .hero-layout {
+    width: min(100% - 48px, 1240px);
+    grid-template-columns: minmax(0, 52%) 1fr;
+  }
+
+  .hero-command h1 {
+    font-size: clamp(66px, 8.5vw, 92px);
+  }
+
+  .hero-art img {
+    object-position: 56% center;
+  }
+}
+
+@media (max-width: 950px) {
+  .hero-command {
+    min-height: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .hero-command .hero-layout {
+    order: 1;
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-command .hero-copy {
+    max-width: 690px;
+    padding: 82px 0 24px;
+  }
+
+  .hero-command h1 {
+    max-width: 7.2ch;
+    font-size: clamp(72px, 12.2vw, 108px);
+  }
+
+  .hero-art {
+    position: relative;
+    order: 2;
+    inset: auto;
+    width: 100%;
+    height: min(70vw, 620px);
+    margin-top: -24px;
+  }
+
+  .hero-art img {
+    position: absolute;
+    right: -3vw;
+    width: auto;
+    max-width: none;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+  }
+
+  .hero-art-shade {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-command .hero-layout {
+    width: min(100% - 36px, 1240px);
+  }
+
+  .hero-command .hero-copy {
+    padding: 54px 0 8px;
+  }
+
+  .hero-command h1 {
+    font-size: clamp(58px, 18vw, 78px);
+    line-height: .82;
+  }
+
+  .hero-command .hero-lede {
+    max-width: 38ch;
+    font-size: 14px;
+  }
+
+  .hero-command .hero-actions {
+    margin-top: 30px;
+  }
+
+  .hero-command .button-primary {
+    min-width: 0;
+    min-height: 58px;
+  }
+
+  .hero-command .hero-contact-line {
+    margin-top: 34px;
+  }
+
+  .hero-art {
+    height: 92vw;
+    min-height: 350px;
+    max-height: 500px;
+    margin-top: -4px;
+  }
+
+  .hero-art img {
+    right: -8vw;
+  }
 }
