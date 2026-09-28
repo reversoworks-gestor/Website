@@ -10,49 +10,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
-    <header class="site-header">
+    <header class="site-header" data-header>
       <nav class="container nav" aria-label="Navegação principal">
         <a class="brand" href="#inicio" aria-label="Reverso Works — início">
           <img class="brand-logo" src="assets/reverso-logo-branca.png" alt="Reverso Works" />
         </a>
-        <div class="nav-links">
-          <a href="#quem-somos">Quem somos</a>
-          <a href="#servicos">O que fazemos</a>
-          <a href="#portfolio">Portfólio</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-icon" aria-hidden="true"></span><span>MENU</span></button>
+        <div class="nav-links" id="primary-nav">
+          <a href="#portfolio">WORK</a>
+          <a href="#servicos">SERVICES</a>
+          <a href="#processo">PROCESS</a>
+          <a href="#quem-somos">ABOUT</a>
         </div>
-        <a class="nav-contact" href="#contato">Iniciar análise <span aria-hidden="true">↗</span></a>
+        <a class="nav-contact" href="mailto:contact@reversoworks.com?subject=Project%20Inquiry">START A PROJECT</a>
       </nav>
     </header>
 
     <main>
-      <section id="inicio" class="hero">
+      <section id="inicio" class="hero hero-command" aria-labelledby="hero-title">
         <div class="hero-grid-overlay" aria-hidden="true"></div>
         <div class="hero-radial" aria-hidden="true"></div>
         <div class="container hero-layout">
           <div class="hero-copy reveal">
-            <p class="eyebrow"><span class="pulse-dot"></span> Engenharia reversa · fabricação digital</p>
-            <h1>Quando a peça deixa de existir, <em>o caminho</em> continua.</h1>
-            <p class="hero-lede">Transformamos necessidades reais em soluções físicas — para recuperar, adaptar, reproduzir ou desenvolver componentes que precisam funcionar no mundo real.</p>
+            <p class="eyebrow"><span></span>REVERSE ENGINEERING / PRODUCT DEVELOPMENT</p>
+            <h1 id="hero-title"><span>FROM PROBLEM</span><span>TO WORKING</span><em>PART.</em></h1>
+            <p class="hero-lede">Reverse engineering, 3D design, prototyping and custom fabrication for parts that no longer exist, no longer fit, or need to work better.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#contato">Apresentar um problema <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#processo">Conhecer o processo <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary" href="mailto:contact@reversoworks.com?subject=Project%20Inquiry">DISCUSS YOUR PROJECT</a>
+              <a class="text-link" href="#portfolio">VIEW SELECTED WORK <span aria-hidden="true">↗</span></a>
             </div>
+            <div class="hero-contact-line" aria-label="Contact information"><a href="tel:+15109383188">+1 (510) 938-3188</a><span aria-hidden="true">/</span><a href="mailto:contact@reversoworks.com">contact@reversoworks.com</a></div>
           </div>
-          <div class="hero-visual reveal" aria-label="Componente técnico em processo de escaneamento 3D">
-            <img src="assets/reverso-hero.jpg" alt="Componente mecânico sob luzes de escaneamento 3D" />
-            <div class="scan-line" aria-hidden="true"></div>
-            <div class="hero-label label-top"><span>CAPTURA</span><strong>3D SCAN / 01</strong></div>
-            <div class="hero-label label-bottom"><span>GEOMETRIA</span><strong>RECONSTRUÇÃO CAD</strong></div>
-            <div class="hero-corner corner-a" aria-hidden="true"></div>
-            <div class="hero-corner corner-b" aria-hidden="true"></div>
+          <div class="product-stage reveal" aria-label="Subaru Impreza fog light bracket em perspectiva técnica">
+            <div class="stage-cross cross-a" aria-hidden="true">+</div><div class="stage-cross cross-b" aria-hidden="true">+</div>
+            <div class="blueprint blueprint-front" aria-hidden="true"><span></span><i></i><b></b></div>
+            <div class="blueprint blueprint-back" aria-hidden="true"></div>
+            <figure class="product-figure">
+              <img src="assets/reverso-bracket.png" width="795" height="760" decoding="async" fetchpriority="high" alt="Suporte de farol de neblina do Subaru Impreza em grafite, mostrado em perspectiva de três quartos" />
+              <figcaption><span>PROJECT 001 —</span><strong>SUBARU IMPREZA FOG LIGHT BRACKET</strong></figcaption>
+            </figure>
+            <div class="process-rail" aria-label="Etapas do projeto"><span>SCAN</span><span>MODEL</span><span>ITERATE</span><span>PROTOTYPE</span><span>VALIDATE</span><span>FABRICATE</span></div>
+            <div class="dimension dimension-top" aria-hidden="true"><span>120.5</span></div><div class="dimension dimension-side" aria-hidden="true"><span>98.0</span></div>
           </div>
-        </div>
-        <div class="container hero-foot">
-          <p>Da demanda à peça real <span></span> com critério técnico em cada etapa.</p>
-          <a href="#quem-somos">Role para explorar <span aria-hidden="true">↓</span></a>
         </div>
       </section>
 
