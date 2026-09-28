@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#07111f" />
   <meta name="color-scheme" content="dark" />
   <link rel="canonical" href="https://www.reversoworks.com/" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2307111f'/%3E%3Cpath d='M14 15h22c10 0 16 5 16 14 0 7-4 11-10 13l11 7H40L29 42h-4v7H14V15Zm11 9v10h10c4 0 6-2 6-5s-2-5-6-5H25Z' fill='%2357d3d3'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="assets/reverso-mark.png" />
   <title>Reverso Works — From problem to working part</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
   <header class="site-header" data-header>
     <nav class="shell nav" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Reverso Works, home">
-        <span class="brand-main">REVERSO</span><span class="brand-sub">WORKS</span>
+        <img src="assets/reverso-wordmark.png" width="621" height="134" alt="Reverso Works" />
       </a>
       <div class="desktop-nav" aria-label="Desktop navigation">
         <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#about">About</a>
@@ -97,6 +97,23 @@
       </div>
     </section>
 
+    <section class="section featured-project project-alt" aria-labelledby="audi-project-title">
+      <div class="shell project-shell">
+        <div class="project-gallery" data-gallery data-reveal>
+          <figure class="gallery-main"><img src="assets/audi-fuel-filter-base-angle.jpg" width="1220" height="766" alt="Three-quarter CAD view of the custom fuel filter base for a 2025 Audi S5" data-gallery-main /><figcaption><span data-gallery-count>01 / 02</span><span data-gallery-caption>Developed geometry / side view</span></figcaption></figure>
+          <div class="gallery-thumbs" aria-label="Audi S5 project image selector">
+            <button class="gallery-thumb is-active" type="button" data-src="assets/audi-fuel-filter-base-angle.jpg" data-alt="Three-quarter CAD view of the custom fuel filter base for a 2025 Audi S5" data-caption="Developed geometry / side view" aria-pressed="true"><img src="assets/audi-fuel-filter-base-angle.jpg" alt="" /><span>Side view</span></button>
+            <button class="gallery-thumb" type="button" data-src="assets/audi-fuel-filter-base-detail.jpg" data-alt="Detailed perspective CAD view of the custom fuel filter base for a 2025 Audi S5" data-caption="Filter interface / structural detail" aria-pressed="false"><img src="assets/audi-fuel-filter-base-detail.jpg" alt="" /><span>Interface detail</span></button>
+          </div>
+        </div>
+        <div class="project-intro" data-reveal>
+          <div class="section-index"><span>03.2</span><p>Selected work</p></div><p class="micro-label">Project 002 / Automotive</p><h2 id="audi-project-title">Fuel filter base.<br /><em>Designed around the installation.</em></h2><p>A custom mounting base developed for the fuel filter of a 2025 Audi S5. The CAD geometry organizes the cylindrical interface inside a supported structure built specifically for the available installation space.</p>
+          <dl class="project-data"><div><dt>Application</dt><dd>2025 Audi S5</dd></div><div><dt>Component</dt><dd>Fuel filter base</dd></div><div><dt>Output</dt><dd>Custom 3D geometry</dd></div></dl>
+          <a class="button button-outline" href="mailto:contact@reversoworks.com?subject=I%20have%20a%20custom%20mounting%20project">Discuss a custom mounting project</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section process" id="process" aria-labelledby="process-title">
       <div class="shell">
         <div class="section-heading compact" data-reveal><div class="section-index"><span>04</span><p>Process</p></div><div><p class="micro-label">Clear steps / visible decisions</p><h2 id="process-title">A direct path from <em>question to validation.</em></h2></div></div>
@@ -110,20 +127,44 @@
       </div>
     </section>
 
+    <section class="section materials" id="materials" aria-labelledby="materials-title">
+      <div class="shell">
+        <div class="materials-heading" data-reveal>
+          <div class="section-index light"><span>05</span><p>Material strategy</p></div>
+          <div><p class="micro-label cyan">Material follows function</p><h2 id="materials-title">3D printed does not mean <em>one kind of plastic.</em></h2><p>We work with Bambu Lab filaments and select the material around what the part needs to prove or survive — not around what is simply easiest to print.</p></div>
+        </div>
+        <div class="material-grid">
+          <article class="material-card" data-reveal>
+            <div class="material-code"><span>01</span><strong>PLA<br />MATTE</strong></div>
+            <div><p class="micro-label">Bambu Lab / Prototype clarity</p><h3>For learning before committing.</h3><p>Used for prototypes that help us confirm shape, fit, packaging and visual direction. It produces clean, readable models for fast design decisions.</p><ul><li>Fit and geometry checks</li><li>Visual prototypes</li><li>Early design iterations</li></ul></div>
+          </article>
+          <article class="material-card" data-reveal>
+            <div class="material-code"><span>02</span><strong>ASA</strong></div>
+            <div><p class="micro-label">Bambu Lab / Heat + environment</p><h3>For conditions beyond the presentation model.</h3><p>Selected for parts that need improved resistance to heat, weather and UV exposure. The actual operating environment is reviewed before it becomes the final choice.</p><ul><li>Warmer environments</li><li>Outdoor exposure</li><li>Functional housings and mounts</li></ul></div>
+          </article>
+          <article class="material-card material-card-strong" data-reveal>
+            <div class="material-code"><span>03</span><strong>PA6<br />CF</strong></div>
+            <div><p class="micro-label">Bambu Lab / Structural performance</p><h3>For parts that need stiffness and strength.</h3><p>Carbon-fiber reinforced nylon is considered when the component demands higher mechanical performance and dimensional stability.</p><ul><li>Load-bearing applications</li><li>Rigid functional components</li><li>Demanding service conditions</li></ul></div>
+          </article>
+        </div>
+        <div class="material-note" data-reveal><span>Material is only part of performance.</span><p>Wall thickness, print orientation, internal structure, interfaces, fasteners and real-world validation are engineered with it.</p><a class="editorial-link" href="mailto:contact@reversoworks.com?subject=Help%20me%20select%20a%20material">Tell us how the part will be used</a></div>
+      </div>
+    </section>
+
     <section class="section standards" aria-labelledby="standards-title">
       <div class="shell standards-grid">
-        <div class="standards-lead" data-reveal><div class="section-index light"><span>05</span><p>How we work</p></div><h2 id="standards-title">Technical work without the <em>black box.</em></h2><p>You should understand what is known, what is assumed and what still needs to be tested.</p></div>
+        <div class="standards-lead" data-reveal><div class="section-index light"><span>06</span><p>How we work</p></div><h2 id="standards-title">Technical work without the <em>black box.</em></h2><p>You should understand what is known, what is assumed and what still needs to be tested.</p></div>
         <div class="standard-cards"><article data-reveal><span>01</span><h3>Traceable revisions</h3><p>Models and decisions are organized so an approved solution can be understood and reproduced.</p></article><article data-reveal><span>02</span><h3>Direct communication</h3><p>You speak with the person developing the part, keeping technical context close to every decision.</p></article><article data-reveal><span>03</span><h3>Validation before claims</h3><p>Critical fit and performance are treated as requirements to verify, not promises to improvise.</p></article></div>
       </div>
     </section>
 
     <section class="section about-works" aria-labelledby="about-title">
-      <div class="shell about-grid"><div class="about-mark" aria-hidden="true" data-reveal><span>R</span><i>/</i><span>W</span></div><div class="about-copy" data-reveal><p class="micro-label">Reverso Works</p><h2 id="about-title">A small engineering studio for the parts that fall between repair, design and fabrication.</h2><p>We work on replacement components, adaptations, prototypes and special-use parts. The scale stays focused so each project receives direct technical attention from first reference to final revision.</p><div class="about-contact"><a href="tel:+15109383188">Call +1 (510) 938-3188</a><a href="mailto:contact@reversoworks.com">Email contact@reversoworks.com</a></div></div></div>
+      <div class="shell about-grid"><div class="about-mark" data-reveal><img src="assets/reverso-logo-full.png" width="621" height="690" alt="Reverso Works" /></div><div class="about-copy" data-reveal><p class="micro-label">Reverso Works</p><h2 id="about-title">A small engineering studio for the parts that fall between repair, design and fabrication.</h2><p>We work on replacement components, adaptations, prototypes and special-use parts. The scale stays focused so each project receives direct technical attention from first reference to final revision.</p><div class="about-contact"><a href="tel:+15109383188">Call +1 (510) 938-3188</a><a href="mailto:contact@reversoworks.com">Email contact@reversoworks.com</a></div></div></div>
     </section>
 
     <section class="section faq" aria-labelledby="faq-title">
       <div class="shell faq-grid">
-        <div class="faq-heading" data-reveal><div class="section-index"><span>06</span><p>Questions</p></div><h2 id="faq-title">Before you contact us.</h2></div>
+        <div class="faq-heading" data-reveal><div class="section-index"><span>07</span><p>Questions</p></div><h2 id="faq-title">Before you contact us.</h2></div>
         <div class="faq-list" data-reveal>
           <details><summary>Can you work from a broken or discontinued part?<span aria-hidden="true"></span></summary><p>Yes. An existing component, mating assembly, photographs and measurements can all become useful reference data. We first assess what is available and what still needs to be captured.</p></details>
           <details><summary>Do I need a finished drawing?<span aria-hidden="true"></span></summary><p>No. Many projects begin with the physical problem rather than a drawing. Photos, the application and a clear description of the failure are enough to start the conversation.</p></details>
@@ -143,7 +184,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-main"><a class="brand" href="#top" aria-label="Reverso Works, back to top"><span class="brand-main">REVERSO</span><span class="brand-sub">WORKS</span></a><p>Reverse engineering · CAD development · Prototyping · Custom fabrication</p><div class="footer-links"><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div>
+    <div class="shell footer-main"><a class="brand" href="#top" aria-label="Reverso Works, back to top"><img src="assets/reverso-wordmark.png" width="621" height="134" alt="Reverso Works" /></a><p>Reverse engineering · CAD development · Prototyping · Custom fabrication</p><div class="footer-links"><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#process">Process</a><a href="#contact">Contact</a></div></div>
     <div class="shell footer-bottom"><span>© <span data-year>2026</span> Reverso Works</span><span>From problem to working part.</span></div>
   </footer>
 
