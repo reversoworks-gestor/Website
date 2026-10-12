@@ -42,7 +42,7 @@ h1, h2, h3 { font-family: var(--display); }
 .nav { height: 88px; display: flex; align-items: center; gap: 44px; }
 .brand { display: inline-flex; align-items: center; flex: none; }
 .brand img { width: 146px; height: auto; }
-.desktop-nav { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+.desktop-nav { display: flex; align-items: center; gap: 12px; margin-left: auto; }
 .desktop-nav a { position: relative; padding: 10px 0; color: #c8d0da; font: 500 12px/1 var(--mono); text-transform: uppercase; letter-spacing: .09em; }
 .desktop-nav a::after { content: ""; position: absolute; right: 0; bottom: 3px; left: 0; height: 1px; transform: scaleX(0); transform-origin: right; background: var(--signal); transition: transform .25s var(--ease); }
 .desktop-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
