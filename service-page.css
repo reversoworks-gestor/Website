@@ -95,6 +95,15 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--reverso-cyan);
 .pdr-checklist strong { font-size: 14px; font-weight: 600; }
 .pdr-assessment-note { margin: 12px 0 0; color: var(--text-muted); font-size: 12px; }
 
+.installation-assessment-panel { min-height: 450px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--technical-line); background: var(--operational-black); }
+.installation-assessment-panel h2 { max-width: 20ch; margin: 0; font-size: clamp(26px, 3vw, 38px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.12; }
+.installation-assessment-copy { max-width: 40ch; margin: 14px 0 0; color: var(--text-muted); font-size: 14px; line-height: 1.65; }
+.installation-checklist { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--technical-line); }
+.installation-checklist li { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--technical-line); }
+.installation-checklist span { color: var(--text-muted); font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; }
+.installation-checklist strong { font-size: 14px; font-weight: 600; }
+.installation-assessment-note { margin: 12px 0 0; color: var(--text-muted); font-size: 12px; }
+
 .section { padding: 88px 0; border-bottom: 1px solid var(--technical-line); }
 .section-heading { display: grid; grid-template-columns: minmax(150px, 0.48fr) minmax(0, 1.52fr); gap: 36px; margin-bottom: 40px; }
 .section-index { margin: 6px 0 0; color: var(--text-muted); font-size: 10px; line-height: 1.5; }
@@ -192,6 +201,7 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--reverso-cyan);
   .hero-photo-stage { min-height: 300px; }
   .hero-photo-stage img { height: min(110vw, 500px); }
   .pdr-assessment-panel { min-height: 0; gap: 24px; }
+  .installation-assessment-panel { min-height: 0; gap: 24px; }
   .hero-facts { gap: 12px; margin-top: 26px; }
   .hero-facts dd { font-size: 12px; }
   .section { padding: 62px 0; }
