@@ -104,6 +104,15 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--reverso-cyan);
 .installation-checklist strong { font-size: 14px; font-weight: 600; }
 .installation-assessment-note { margin: 12px 0 0; color: var(--text-muted); font-size: 12px; }
 
+.ecu-assessment-panel { min-height: 450px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--technical-line); background: var(--operational-black); }
+.ecu-assessment-panel h2 { max-width: 19ch; margin: 0; font-size: clamp(26px, 3vw, 38px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.12; }
+.ecu-assessment-copy { max-width: 40ch; margin: 14px 0 0; color: var(--text-muted); font-size: 14px; line-height: 1.65; }
+.ecu-assessment-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--technical-line); }
+.ecu-assessment-list li { display: grid; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--technical-line); }
+.ecu-assessment-list span { color: var(--text-muted); font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.07em; }
+.ecu-assessment-list strong { font-size: 14px; font-weight: 600; }
+.ecu-assessment-note { margin: 12px 0 0; color: var(--text-muted); font-size: 12px; }
+
 .section { padding: 88px 0; border-bottom: 1px solid var(--technical-line); }
 .section-heading { display: grid; grid-template-columns: minmax(150px, 0.48fr) minmax(0, 1.52fr); gap: 36px; margin-bottom: 40px; }
 .section-index { margin: 6px 0 0; color: var(--text-muted); font-size: 10px; line-height: 1.5; }
@@ -202,6 +211,7 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--reverso-cyan);
   .hero-photo-stage img { height: min(110vw, 500px); }
   .pdr-assessment-panel { min-height: 0; gap: 24px; }
   .installation-assessment-panel { min-height: 0; gap: 24px; }
+  .ecu-assessment-panel { min-height: 0; gap: 24px; }
   .hero-facts { gap: 12px; margin-top: 26px; }
   .hero-facts dd { font-size: 12px; }
   .section { padding: 62px 0; }
@@ -229,6 +239,59 @@ a:focus-visible, summary:focus-visible { outline: 2px solid var(--reverso-cyan);
   .footer-brand-block { grid-column: 1 / -1; }
   .footer-brand-block > a { width: 90px; height: 90px; }
   .footer-bottom { flex-direction: column; gap: 7px; }
+}
+
+.soft-service-page .hero { padding: 92px 0 100px; }
+.soft-service-page .hero-grid { align-items: start; gap: clamp(48px, 7vw, 88px); }
+.soft-service-page .hero h1 { max-width: 14ch; font-size: clamp(44px, 6.4vw, 76px); font-weight: 500; letter-spacing: -0.055em; line-height: 1.04; }
+.soft-service-page .hero-figure { padding: 22px; border-color: var(--technical-line); background: var(--operational-graphite); }
+.soft-service-page .figure-code { padding-bottom: 10px; }
+.soft-service-page .installation-assessment-panel,
+.soft-service-page .ecu-assessment-panel { min-height: 0; gap: 22px; padding: 0; border: 0; background: transparent; }
+.soft-service-page .installation-assessment-panel h2,
+.soft-service-page .ecu-assessment-panel h2 { max-width: 20ch; font-size: clamp(25px, 2.5vw, 32px); font-weight: 500; letter-spacing: -0.035em; line-height: 1.2; }
+.soft-service-page .installation-checklist,
+.soft-service-page .ecu-assessment-list { border-top: 1px solid var(--technical-line); border-bottom: 1px solid var(--technical-line); }
+.soft-service-page .installation-checklist li,
+.soft-service-page .ecu-assessment-list li { gap: 5px; padding: 11px 0; border-bottom: 0; }
+.soft-service-page .installation-checklist li + li,
+.soft-service-page .ecu-assessment-list li + li { border-top: 1px solid var(--technical-line); }
+.soft-service-page .installation-assessment-note,
+.soft-service-page .ecu-assessment-note { margin-top: 14px; }
+.soft-service-page .section { padding: 104px 0; }
+.soft-service-page .section-heading { gap: 40px; margin-bottom: 52px; }
+.soft-service-page .scope-grid { gap: clamp(24px, 3vw, 40px); border: 0; }
+.soft-service-page .scope-card { min-height: 0; padding: 20px 0 0; border: 0; border-top: 1px solid var(--technical-line); background: transparent; }
+.soft-service-page .scope-card .mono-label { margin-bottom: 14px; }
+.soft-service-page .scope-card h3,
+.soft-service-page .steps-grid h3 { font-weight: 500; }
+.soft-service-page .steps-grid { gap: clamp(24px, 3vw, 40px); border: 0; }
+.soft-service-page .steps-grid li { min-height: 0; padding: 20px 0 0; border: 0; border-top: 1px solid var(--technical-line); background: transparent; }
+.soft-service-page .step-number { margin-bottom: 18px; }
+.soft-service-page .faq-layout { gap: clamp(40px, 7vw, 88px); }
+.soft-service-page .contact-section { padding: 92px 0; background: var(--operational-graphite); }
+
+@media (max-width: 900px) {
+  .soft-service-page .hero { padding: 72px 0 80px; }
+  .soft-service-page .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(270px, 0.95fr); gap: 30px; }
+  .soft-service-page .hero h1 { font-size: clamp(42px, 6.4vw, 64px); }
+  .soft-service-page .section-heading { grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1.6fr); gap: 24px; }
+  .soft-service-page .scope-grid,
+  .soft-service-page .steps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  .soft-service-page .hero { padding: 42px 0 48px; }
+  .soft-service-page .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .soft-service-page .hero h1 { font-size: clamp(42px, 12vw, 58px); }
+  .soft-service-page .hero-figure { padding: 18px; }
+  .soft-service-page .section { padding: 66px 0; }
+  .soft-service-page .section-heading { grid-template-columns: 1fr; gap: 16px; margin-bottom: 28px; }
+  .soft-service-page .scope-grid,
+  .soft-service-page .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+  .soft-service-page .steps-grid li { padding-top: 16px; }
+  .soft-service-page .faq-layout { gap: 26px; }
+  .soft-service-page .contact-section { padding: 64px 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
