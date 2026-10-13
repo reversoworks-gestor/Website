@@ -436,3 +436,11 @@ input:focus, textarea:focus, select:focus { border-color: var(--amber); backgrou
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
+/* SEO-friendly GitHub Pages fallback */
+.error-page { min-height: 72vh; display: grid; place-items: center; padding: 140px 0 88px; background: linear-gradient(135deg, #0b2236, #0a0c10); }
+.error-page .page-shell { display: grid; gap: 24px; }
+.error-page .error-code { margin: 0; color: var(--amber); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.error-page h1 { max-width: 10ch; margin: 0; color: #fff; font-family: var(--font-display); font-size: clamp(72px, 12vw, 150px); font-weight: 800; letter-spacing: -.02em; line-height: .82; text-transform: uppercase; }
+.error-page h1 em { color: var(--amber); font-style: normal; }
+.error-page p:not(.error-code) { max-width: 60ch; margin: 0; color: #dce5e9; font-size: 18px; line-height: 1.65; }
