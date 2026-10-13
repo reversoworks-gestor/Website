@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.reversoworks.com/</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.reversoworks.com/headlight-restoration.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.reversoworks.com/custom-3d-automotive.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.reversoworks.com/custom-headlight-installation.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.reversoworks.com/ecu-module-repair.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
-  <url>
-    <loc>https://www.reversoworks.com/paintless-dent-repair.html</loc>
-    <lastmod>2026-10-12</lastmod>
-  </url>
+  <url><loc>https://www.reversoworks.com/</loc></url>
+  <url><loc>https://www.reversoworks.com/3d-projects/</loc></url>
+  <url><loc>https://www.reversoworks.com/pdr/</loc></url>
+  <url><loc>https://www.reversoworks.com/headlight-restoration/</loc></url>
+  <url><loc>https://www.reversoworks.com/automotive-services/</loc></url>
 </urlset>

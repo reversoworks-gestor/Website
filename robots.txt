@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 Sitemap: https://www.reversoworks.com/sitemap.xml
