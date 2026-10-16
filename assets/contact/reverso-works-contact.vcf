@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Reverso Works
+ORG:Reverso Works
+TEL;TYPE=WORK,VOICE:+1-510-938-3188
+TEL;TYPE=CELL:+1-510-938-3188
+EMAIL;TYPE=INTERNET:contact@reversoworks.com
+ADR;TYPE=WORK:;;3573 Eugene St. Unit B;Fremont;CA;;USA
+URL:https://www.reversoworks.com/contact/
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/reversoworks/
+NOTE:Technical automotive care and custom project development. Visits by appointment.
+END:VCARD
