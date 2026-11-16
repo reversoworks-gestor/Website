@@ -70,7 +70,9 @@
   var ticks = document.getElementById("ticks");
   var count = document.getElementById("count");
 
+  var dock = document.querySelector(".cta-dock");
   function setActive(n) {
+    if (dock) dock.classList.toggle("hide", n === 0);
     if (count) count.textContent = pad(n) + "/" + pad(total);
     if (!ticks) return;
     [].forEach.call(ticks.children, function (t, i) {
