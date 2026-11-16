@@ -72,7 +72,6 @@
 
   var dock = document.querySelector(".cta-dock");
   function setActive(n) {
-    if (dock) dock.classList.toggle("hide", n === 0);
     if (count) count.textContent = pad(n) + "/" + pad(total);
     if (!ticks) return;
     [].forEach.call(ticks.children, function (t, i) {
@@ -113,4 +112,8 @@
     if (best !== null) setActive(best);
   }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
   steps.forEach(function (s) { io.observe(s); });
+  var heroEl = document.querySelector('[data-step="0"]');
+  if (dock && heroEl) {
+    new IntersectionObserver(function (en) { dock.classList.toggle("hide", en[0].intersectionRatio > 0.5); }, { threshold: [0, 0.5, 1] }).observe(heroEl);
+  }
 })();
