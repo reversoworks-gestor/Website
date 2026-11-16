@@ -27,6 +27,43 @@
     });
   }
 
+
+  var form = document.getElementById("assessForm");
+  if (form) {
+    var svc = new URLSearchParams(location.search).get("service");
+    var opt = svc && form.querySelector('option[data-key="' + svc + '"]'); if (opt) form.elements["Service"].value = opt.value;
+    var fnote = document.getElementById("formNote");
+    form.addEventListener("input", function () { if (fnote.className.indexOf("err") > -1) { fnote.className = "small"; fnote.textContent = ""; } });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var bad = null;
+      ["First name", "Last name", "Phone", "Service"].forEach(function (n) {
+        var el = form.elements[n]; var v = (el.value || "").trim();
+        var ok = v && (n !== "Phone" || v.replace(/\D/g, "").length >= 10);
+        el.classList.toggle("invalid", !ok);
+        if (!ok && !bad) bad = el;
+      });
+      var pref = form.querySelector('input[name="Contact preference"]:checked');
+      if (!pref && !bad) bad = form.querySelector('input[name="Contact preference"]');
+      if (bad) { fnote.className = "small err"; fnote.textContent = "Please complete every field. Use a phone number with at least 10 digits."; bad.focus(); return; }
+      var btn = form.querySelector(".submit"); btn.disabled = true; fnote.className = "small"; fnote.textContent = "Sending...";
+      var fd = new FormData(form);
+      fetch(form.action, { method: "POST", body: fd, headers: { Accept: "application/json" } })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success !== "false" && j.success !== false, j: j }; }); })
+        .then(function (res) {
+          if (!res.ok) throw new Error("send");
+          track("form_submit_success");
+          form.hidden = true;
+          document.getElementById("doneText").textContent = pref.value === "Text message" ? "We will text you soon to set up your assessment." : "We will call you soon to set up your assessment.";
+          document.getElementById("formDone").hidden = false;
+        })
+        .catch(function () {
+          btn.disabled = false; fnote.className = "small err";
+          fnote.textContent = "We could not send your request. Please call (510) 938-3188 or text us.";
+        });
+    });
+  }
+
   var steps = [].slice.call(document.querySelectorAll("[data-step]"));
   if (!steps.length) return;
   var total = steps.filter(function (s) { return s.getAttribute("data-step") !== "0"; }).length;

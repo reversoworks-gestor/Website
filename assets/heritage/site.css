@@ -148,3 +148,19 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Assessment form */
+.aform { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; }
+.aform .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .aform .row2 { grid-template-columns: 1fr; } }
+.aform .f { display: flex; flex-direction: column; gap: 6px; min-width: 0; border: 0; padding: 0; margin: 0; }
+.aform label, .aform legend { font: 600 12px/1.4 var(--font-text); letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); padding: 0; }
+.aform input[type=text], .aform input[type=tel], .aform select { width: 100%; font: 400 16px/1.4 var(--font-text); color: var(--green); background: #fffaf2; border: 1px solid var(--line-on-cream); border-radius: var(--r-btn); padding: 13px 12px; min-height: 48px; }
+.aform input:focus, .aform select:focus { outline: 2px solid var(--brass); outline-offset: 1px; }
+.aform .opt { display: flex; align-items: center; gap: 12px; text-transform: none; letter-spacing: 0; font: 400 16px/1.4 var(--font-text); min-height: 48px; padding: 0 12px; background: #fffaf2; border: 1px solid var(--line-on-cream); border-radius: var(--r-btn); margin-top: 6px; cursor: pointer; }
+.aform .opt input { width: 20px; height: 20px; accent-color: var(--green); }
+.aform .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.aform .submit { align-self: flex-start; }
+.aform .invalid { border-color: #9b2c2c; }
+.aform #formNote.err { color: #9b2c2c; font-weight: 600; }
+.formgo { align-self: flex-start; }
