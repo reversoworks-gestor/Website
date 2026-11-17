@@ -195,3 +195,15 @@ a { color: inherit; }
 .pickgrid .pa { grid-column: 2; grid-row: 1 / span 2; color: var(--brass); }
 .pickgrid .pa svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .wa-link { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--cream); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 4px; padding: 8px 0; }
+
+/* Faixa de posicionamento */
+.band { background: var(--green); color: var(--cream); margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding: 96px max(16px, env(safe-area-inset-right, 0px)) 96px max(16px, env(safe-area-inset-left, 0px)); border-block: 3px solid var(--brass); }
+.band .wrap { max-width: 760px; margin: 0 auto; }
+.band .txt { display: flex; flex-direction: column; gap: 18px; }
+.band .eyebrow { color: var(--brass); display: inline-flex; align-items: center; gap: 10px; }
+.band .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--brass); }
+.band h2 { font-size: 38px; line-height: 1.1; color: var(--cream); text-wrap: balance; }
+.band p { font-size: 17px; line-height: 1.6; color: var(--on-green-muted); }
+.band .pull { font-family: var(--font-title); font-style: italic; font-size: 24px; line-height: 1.35; color: var(--cream); border-left: 3px solid var(--brass); padding-left: 16px; }
+.band a { color: var(--brass); text-decoration-color: var(--brass); text-underline-offset: 3px; }
+@media (min-width: 760px) { .band h2 { font-size: 52px; } .band .pull { font-size: 30px; } }
