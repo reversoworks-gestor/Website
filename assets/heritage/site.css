@@ -225,3 +225,16 @@ a { color: inherit; }
 .band .pull { font-size: 26px; margin-top: 4px; }
 .band p.small { font-size: 14px; }
 @media (min-width: 760px) { .band h2 { font-size: 56px; } .principles .t { font-size: 24px; } }
+
+/* Perguntas em acordeao e secoes de tela cheia */
+.light { min-height: 100svh; display: flex; align-items: center; }
+.light .wrap { width: 100%; }
+.light.footscreen { min-height: 0; align-items: flex-start; padding-top: 48px; scroll-snap-align: end; }
+.faq details.q { border-top: 1px solid var(--line-on-cream); padding: 0; }
+.faq details.q:last-child { border-bottom: 1px solid var(--line-on-cream); }
+.faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; min-height: 56px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { margin: 0; font-size: 18px; }
+.faq summary::after { content: "+"; font-family: var(--font-title); font-size: 26px; line-height: 1; color: var(--brass); flex: none; }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details > p { padding: 0 0 18px; margin: 0; }
