@@ -28,6 +28,16 @@
   }
 
 
+  [].forEach.call(document.querySelectorAll(".faq"), function (box) {
+    var items = [].slice.call(box.querySelectorAll("details"));
+    items.forEach(function (d) {
+      d.addEventListener("toggle", function () {
+        if (!d.open) return;
+        items.forEach(function (o) { if (o !== d) o.open = false; });
+      });
+    });
+  });
+
   var form = document.getElementById("assessForm");
   if (form) {
     var svc = new URLSearchParams(location.search).get("service");
