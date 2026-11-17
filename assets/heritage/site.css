@@ -238,3 +238,24 @@ a { color: inherit; }
 .faq summary::after { content: "+"; font-family: var(--font-title); font-size: 26px; line-height: 1; color: var(--brass); flex: none; }
 .faq details[open] summary::after { content: "\2212"; }
 .faq details > p { padding: 0 0 18px; margin: 0; }
+
+/* Telas cheias sem folga no topo: conteudo comeca logo abaixo do cabecalho e distribui a altura */
+.light:not(.footscreen):not(.plain-pad), .band { padding-top: calc(env(safe-area-inset-top, 0px) + 76px); padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 28px); align-items: stretch; }
+html:not(.plain) .light:not(.footscreen) > .wrap, html:not(.plain) .band > .wrap { min-height: calc(100svh - 76px - 28px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; max-width: 760px; margin-inline: auto; }
+html:not(.plain) .light:not(.footscreen) > .wrap > .txt, html:not(.plain) .band > .wrap > .txt { flex: 1; display: flex; flex-direction: column; gap: clamp(14px, 2.4svh, 26px); }
+/* listas que esticam para ocupar o espaco */
+.rows.steps { flex: 1; justify-content: space-between; }
+.rows.steps > li { flex: 1; align-items: center; padding: clamp(12px, 2svh, 24px) 0; }
+.rows.steps .nm { font-size: clamp(17px, 2.5svh, 22px); }
+.rows.steps .ds { font-size: clamp(15px, 2svh, 17px); }
+.principles { flex: 1; }
+.principles li { flex: 1; align-items: center; }
+.faq { flex: 1; justify-content: space-between; }
+.faq details.q { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.faq summary { padding: clamp(14px, 2.4svh, 26px) 0; }
+.faq summary h3 { font-size: clamp(17px, 2.5svh, 21px); }
+.formgo { align-self: flex-start; }
+.rows.steps > li { padding: clamp(6px, 1.1svh, 14px) 0; gap: 14px; }
+.rows.steps .ds { line-height: 1.4; font-size: clamp(14px, 1.9svh, 16px); }
+.rows.steps .nm { font-size: clamp(16px, 2.2svh, 20px); }
+.rows.steps .b { gap: 2px; }
