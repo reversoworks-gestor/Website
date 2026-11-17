@@ -28,6 +28,46 @@
   }
 
 
+  /* Voltar como no iPhone: lembra onde o visitante estava e aceita deslizar da borda esquerda */
+  var SKEY = "rw:scroll:" + location.pathname;
+  try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch (e) {}
+  function saveScroll() { try { sessionStorage.setItem(SKEY, String(window.scrollY)); } catch (e) {} }
+  function restoreScroll() {
+    try {
+      var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+      var back = nav && nav.type === "back_forward";
+      var y = Number(sessionStorage.getItem(SKEY));
+      if ((back || window.__rwPersisted) && y > 0) {
+        requestAnimationFrame(function () { requestAnimationFrame(function () { window.scrollTo(0, y); }); });
+      }
+    } catch (e) {}
+  }
+  window.addEventListener("pagehide", saveScroll);
+  window.addEventListener("pageshow", function (e) { window.__rwPersisted = e.persisted; restoreScroll(); });
+  document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("a[href]")) saveScroll(); }, true);
+
+  var sx = null, sy = null, tracking = false;
+  document.addEventListener("touchstart", function (e) {
+    var t0 = e.touches[0];
+    tracking = e.touches.length === 1 && t0.clientX <= 24;
+    sx = t0.clientX; sy = t0.clientY;
+  }, { passive: true });
+  document.addEventListener("touchcancel", function () { tracking = false; }, { passive: true });
+  document.addEventListener("touchend", function (e) {
+    if (!tracking) return; tracking = false;
+    var t1 = e.changedTouches[0], dx = t1.clientX - sx, dy = Math.abs(t1.clientY - sy);
+    if (dx > 80 && dy < 60) {
+      var page = document.querySelector(".page");
+      if (page) { page.style.transition = "transform .18s ease, opacity .18s ease"; page.style.transform = "translateX(40px)"; page.style.opacity = "0.4"; }
+      setTimeout(function () {
+        var sameSite = document.referrer && document.referrer.indexOf(location.origin) === 0;
+        if (history.length > 1 && sameSite) history.back();
+        else if (location.pathname.replace(/\/index\.html$/, "").replace(/\/$/, "") !== "") location.href = document.querySelector(".brand").href;
+        else if (page) { page.style.transform = ""; page.style.opacity = ""; }
+      }, 160);
+    }
+  }, { passive: true });
+
   [].forEach.call(document.querySelectorAll(".faq"), function (box) {
     var items = [].slice.call(box.querySelectorAll("details"));
     items.forEach(function (d) {
