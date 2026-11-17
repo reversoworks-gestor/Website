@@ -240,7 +240,7 @@ a { color: inherit; }
 .faq details > p { padding: 0 0 18px; margin: 0; }
 
 /* Telas cheias sem folga no topo: conteudo comeca logo abaixo do cabecalho e distribui a altura */
-.light:not(.footscreen):not(.plain-pad), .band { padding-top: calc(env(safe-area-inset-top, 0px) + 76px); padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 28px); align-items: stretch; }
+.light:not(.footscreen):not(.plain-pad), .band { padding-top: 76px; padding-bottom: 28px; align-items: stretch; }
 html:not(.plain) .light:not(.footscreen) > .wrap, html:not(.plain) .band > .wrap { min-height: calc(100svh - 76px - 28px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; justify-content: space-between; gap: 24px; max-width: 760px; margin-inline: auto; }
 html:not(.plain) .light:not(.footscreen) > .wrap > .txt, html:not(.plain) .band > .wrap > .txt { flex: 1; display: flex; flex-direction: column; gap: clamp(14px, 2.4svh, 26px); }
 /* listas que esticam para ocupar o espaco */
@@ -259,3 +259,12 @@ html:not(.plain) .light:not(.footscreen) > .wrap > .txt, html:not(.plain) .band 
 .rows.steps .ds { line-height: 1.4; font-size: clamp(14px, 1.9svh, 16px); }
 .rows.steps .nm { font-size: clamp(16px, 2.2svh, 20px); }
 .rows.steps .b { gap: 2px; }
+/* Altura da tela cheia descontando as areas seguras (a raiz ja tem esse padding) */
+.light:not(.footscreen):not(.plain-pad), .band { min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); }
+html.plain .light { min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); }
+/* Compacta o conteudo para caber na area util (tela menos as areas seguras) */
+.rows.steps > li { padding: 5px 0; gap: 12px; }
+.rows.steps .ds { font-size: 14px; line-height: 1.35; }
+.rows.steps .nm { font-size: 16px; }
+.light:not(.footscreen):not(.plain-pad), .band { padding-top: 64px; padding-bottom: 20px; }
+html:not(.plain) .light:not(.footscreen) > .wrap, html:not(.plain) .band > .wrap { min-height: calc(100svh - 64px - 20px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); gap: 14px; }
