@@ -112,8 +112,13 @@
     if (best !== null) setActive(best);
   }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
   steps.forEach(function (s) { io.observe(s); });
-  var heroEl = document.querySelector('[data-step="0"]');
-  if (dock && heroEl) {
-    new IntersectionObserver(function (en) { dock.classList.toggle("hide", en[0].intersectionRatio > 0.5); }, { threshold: [0, 0.5, 1] }).observe(heroEl);
+  if (dock) {
+    var covers = [].slice.call(document.querySelectorAll('[data-step="0"], .light, .band'));
+    var seen = {};
+    var dio = new IntersectionObserver(function (en) {
+      en.forEach(function (e) { seen[covers.indexOf(e.target)] = e.intersectionRatio > 0.12 || (e.target.getAttribute("data-step") === "0" && e.intersectionRatio > 0.5); });
+      dock.classList.toggle("hide", Object.keys(seen).some(function (k) { return seen[k]; }));
+    }, { threshold: [0, 0.12, 0.5, 1] });
+    covers.forEach(function (c) { dio.observe(c); });
   }
 })();
