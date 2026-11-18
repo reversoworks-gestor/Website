@@ -268,3 +268,4 @@ html.plain .light { min-height: calc(100svh - env(safe-area-inset-top, 0px) - en
 .rows.steps .nm { font-size: 16px; }
 .light:not(.footscreen):not(.plain-pad), .band { padding-top: 64px; padding-bottom: 20px; }
 html:not(.plain) .light:not(.footscreen) > .wrap, html:not(.plain) .band > .wrap { min-height: calc(100svh - 64px - 20px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); gap: 14px; }
+.brand .mk { width: 16px; height: 16px; align-self: center; margin-right: 2px; flex: none; }
